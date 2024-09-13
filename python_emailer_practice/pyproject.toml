@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "emailing-prac"
+version = "0.1.0"
+description = ""
+authors = ["Eli Grubbs <gitcontribs@eligrubbs.com>"]
+readme = "README.md"
+packages = [
+    { include = "app"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pydantic-settings = "^2.4.0"
+emails = "^0.6"
+jinja2 = "^3.1.4"
+
+[tool.poetry.scripts]
+# specify entrypoint for cli cmd `send_email`
+send_email = "app.main:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
