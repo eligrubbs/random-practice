@@ -1,0 +1,8 @@
+
+
+@start:
+    docker compose -f docker-compose-dev.yaml up -d
+    ./start.sh
+
+@stop:
+    docker compose -f docker-compose-dev.yaml down
